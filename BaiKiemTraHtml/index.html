@@ -29,9 +29,9 @@
                         <a href="#supervised-learning-hoc-co-giam-sat">Supervised Learning (Học có giám sát)</a>
                         <ul>
                             <li>
-                                <a href="#classification-phan-loai">Classification (Phân
-                                    loại)</a </li>
-                            <li><a href="#regression-hoi-quy">Regression (Hồi quy)</a></li>
+                                <a href="#classification-algorithms">Classification (Phân loại)</a>
+                            </li>
+                            <li><a href="#regression-hồi-quy">Regression (Hồi quy)</a></li>
                         </ul>
                     </li>
 
@@ -41,7 +41,8 @@
 
                         <ul>
                             <li>
-                                <a href="#clustering-phan-nhom">Clustering (phân nhóm)</a </li>
+                                <a href="#clustering-phan-nhom">Clustering (phân nhóm)</a>
+                            </li>
                             <li><a href="#association">Association</a></li>
                         </ul>
                     </li>
@@ -76,11 +77,11 @@
         </ul>
     </div>
 
-    <h2 id=".phan-nhom-dua-tren-phuong-thuc-hoc">1. Phân nhóm dựa trên phương thức học</h2>
+    <h2 id="phan-nhom-dua-tren-phuong-thuc-hoc">1. Phân nhóm dựa trên phương thức học</h2>
     <p>Theo phương thức học, các thuật toán Machine Learning thường được chia làm 4 nhóm: Supervised learning,
         Unsupervised learning, Semi-supervised learning và Reinforcement learning. Có một số cách phân nhóm không có
         Semi-supervised learning hoặc Reinforcement learning.</p>
-    <h3 id=".unsupervised-learning-hoc-khong-giam-sat">Supervised Learning (Học có giám sát)</h3>
+    <h3 id="supervised-learning-hoc-co-giam-sat">Supervised Learning (Học có giám sát)</h3>
     <p>Supervised learning là thuật toán dự đoán đầu ra (outcome) của một dữ liệu mới (new input) dựa trên các cặp
         (input, outcome) đã biết từ trước. Cặp dữ liệu này còn được gọi là (data, label), tức (dữ liệu, nhãn).
         Supervised learning là nhóm phổ biến nhất trong các thuật toán Machine Learning.</p>
@@ -144,7 +145,7 @@
         thuật toán <strong>Regression</strong>. <em>Chú ý rằng phần dự đoán tuổi cũng có thể coi là
             <strong>Classification</strong> nếu ta coi tuổi là một số nguyên dương không lớn hơn 150, chúng ta sẽ có 150
             class (lớp) khác nhau.</em></p>
-    <h4 id="unsupervised-learning-học-không-giám-sát">Unsupervised Learning (Học không giám sát)</h4>
+    <h4 id="unsupervised-learning-hoc-khong-giam-sat">Unsupervised Learning (Học không giám sát)</h4>
     <p>Trong thuật toán này, chúng ta không biết được <em>outcome</em> hay nhãn mà chỉ có dữ liệu đầu vào. Thuật toán
         unsupervised learning sẽ dựa vào cấu trúc của dữ liệu để thực hiện một công việc nào đó, ví dụ như phân nhóm
         (clustering) hoặc giảm số chiều của dữ liệu (dimension reduction) để thuận tiện trong việc lưu trữ và tính toán.
@@ -158,7 +159,7 @@
         cho ta biết đó là chữ A hay chữ B. Cụm không giám sát được đặt tên theo nghĩa này.</p>
 
     <p>Các bài toán Unsupervised learning được tiếp tục chia nhỏ thành hai loại:</p>
-    <h4 id="clustering-phân-nhóm">Clustering (phân nhóm)</h4>
+    <h4 id="clustering-algorithms">Clustering (phân nhóm)</h4>
     <p>Một bài toán phân nhóm toàn bộ dữ liệu <strong>X</strong>thành các nhóm nhỏ dựa trên sự liên quan giữa các dữ
         liệu trong mỗi nhóm. Ví dụ: phân nhóm khách hàng dựa trên hành vi mua hàng. Điều này cũng giống như việc ta đưa
         cho một đứa trẻ rất nhiều mảnh ghép với các hình thù và màu sắc khác nhau, ví dụ tam giác, vuông, tròn với màu
@@ -171,7 +172,7 @@
         xu hướng xem thêm phim Bat Man, dựa vào đó tạo ra một hệ thống gợi ý khách hàng (Recommendation System), thúc
         đẩy nhu cầu mua sắm.</p>
 
-    <h4 id="association">Semi-Supervised Learning (Học bán giám sát)</h4>
+    <h4 id="#semi-supervised-learning-hoc-ban-giam-sat">Semi-Supervised Learning (Học bán giám sát)</h4>
     <p>Các bài toán khi chúng ta có một lượng lớn dữ liệu <strong>X</strong>nhưng chỉ một phần trong chúng được gán nhãn
         được gọi là Semi-Supervised Learning. Những bài toán thuộc nhóm này nằm giữa hai nhóm được nêu bên trên.</p>
     <P>Một ví dụ điển hình của nhóm này là chỉ có một phần ảnh hoặc văn bản được gán nhãn (ví dụ bức ảnh về người, động
@@ -180,7 +181,7 @@
         liệu có nhãn tốn rất nhiều thời gian và có chi phí cao. Rất nhiều loại dữ liệu thậm chí cần phải có chuyên gia
         mới gán nhãn được (ảnh y học chẳng hạn). Ngược lại, dữ liệu chưa có nhãn có thể được thu thập với chi phí thấp
         từ internet.</P>
-    <h4 id="semi-supervised-learning-học-bán-giám-sát">Reinforcement Learning (Học Củng Cố)</h4>
+    <h4 id="reinforcement-learning-hoc-cung-co">Reinforcement Learning (Học Củng Cố)</h4>
     <p>Reinforcement learning là các bài toán giúp cho một hệ thống tự động xác định hành vi dựa trên hoàn cảnh để đạt
         được lợi ích cao nhất (maximizing the performance). Hiện tại, Reinforcement learning chủ yếu được áp dụng vào Lý
         Thuyết Trò Chơi (Game Theory), các thuật toán cần xác định nước đi tiếp theo để đạt được điểm số cao nhất.</p>
@@ -235,7 +236,7 @@
 
     <p>Huấn luyện cho máy tính chơi game Mario</p>
 
-    <h2 id=".phan-nhom-dua-tren-chuc-nang">2. Phân nhóm dựa trên chức năng</h2>
+    <h2 id="phan-nhom-dua-tren-chuc-nang">2. Phân nhóm dựa trên chức năng</h2>
 
     <p>Có một cách phân nhóm thứ hai dựa trên chức năng của các thuật toán. Trong phần này, tôi xin chỉ liệt kê các
         thuật toán. Thông tin cụ thể sẽ được trình bày trong các bài viết khác tại blog này. Trong quá trình viết, tôi
