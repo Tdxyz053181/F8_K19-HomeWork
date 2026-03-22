@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Ẩn ô check box */
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        /* Css cho nút mở thông báo */
+        .open-btn {
+            display: inline-block;
+            margin: 50px 20px;
+            padding: 20px;
+            background-color: #3b82f6;
+            color: #ffffff;
+        }
+
+        /* Css cho hộp modal */
+        .modal {
+            width: 200px;
+            height: 100px;
+            display: block;
+            padding: 30px;
+            background-color: #ffffff;
+            margin: 0 auto;
+        }
+
+        /* Css cho thẻ span */
+        span {
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Css cho label overlay toàn màn hình */
+        .overlay {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #333333;
+            display: none;
+        }
+
+        /* Css cho nút đóng thông báo */
+        .close-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #ef4444;
+            color: #ffffff;
+        }
+
+        /* Thực hiện hành động mở model khi nhấp vào nút mở thông báo */
+        .container:has(.open-btn #modal-toggle:checked) .overlay {
+            display: inline-block;
+        }
+
+        /* Thực hiện hành động ẩn nút mở thông báo khi nhấp vào nút mở thông báo */
+        .container:has(.open-btn #modal-toggle:checked) .open-btn {
+            display: none;
+        }
+
+        /* Thực hiện hành động ẩn modal khi nhấp vào nút đóng thông báo và khi nhấp vào vùng màn hình xám*/
+        .container:has(.close-btn #modal-toggle:checked) .overlay {
+            display: none;
+        }
+
+        /* Thực hiện hành động hiện nút mở thông báo khi nhấp vào nút đóng thông báo và khi nhấp vào vùng màn hình xám* */
+        .container:has(.close-btn #modal-toggle:checked) .open-btn {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <label class="open-btn">
+        Hiện thông báo
+        <input type="checkbox" id="modal-toggle">
+    </label>
+
+    <label class="overlay">
+        <div class="modal">
+            <span>Đây là nội dung thông báo!</span>
+            <label class="close-btn">
+                Đóng!
+                <input type="checkbox" id="modal-toggle">
+            </label>
+        </div>
+    </label>
+</body>
+
+</html>
