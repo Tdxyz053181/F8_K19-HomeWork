@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập Buổi 9</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Ẩn ô check box */
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        /* Css cho nút mở thông báo */
+        .open-btn {
+            display: inline-block;
+            margin: 50px 20px;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Css cho hộp thông báo */
+        .toast {
+            margin: 50px 20px;
+            padding: 20px;
+            background-color: green;
+            color: #fff;
+            display: none;
+        }
+
+        /* Css cho nút đóng thông báo */
+        .close-btn {
+            padding: 3px 6px;
+            background-color: aliceblue;
+            color: #000;
+            margin-left: 4px;
+        }
+
+        /* Css thực hiện hành động mở thông báo */
+        .container:has(.open-btn #toast-toggle:checked) .toast {
+            display: inline-block;
+        }
+
+        /* Css thực hiện hành động đóng thông báo */
+        .container:has(.close-btn #toast-toggle:checked) .toast {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body class="container">
+    <label class="open-btn">
+        Hiện thông báo
+        <input type="checkbox" id="toast-toggle">
+    </label>
+
+    <div class="toast">
+        Xin chào
+        <label class="close-btn">
+            X
+            <input type="checkbox" id="toast-toggle">
+        </label>
+    </div>
+</body>
+
+</html>
