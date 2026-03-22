@@ -1,1 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập buổi 9</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            display: inline-block;
+            margin: 20px;
+        }
+
+        /* 1. Hình vuông */
+        .square {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            display: inline-block;
+        }
+
+        .rectangle {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000;
+            display: inline-block;
+        }
+
+        .triangle-up {
+            width: 0px;
+            border-left: 50px solid;
+            border-right: 50px solid;
+            border-bottom: 70px solid;
+            border-color: transparent transparent red transparent;
+        }
+
+        .triangle-down {
+            width: 0px;
+            border-left: 50px solid;
+            border-right: 50px solid;
+            border-top: 70px solid;
+            border-color: red transparent transparent transparent;
+        }
+
+        .triangle-left {
+            width: 0px;
+            border-right: 70px solid;
+            border-bottom: 50px solid;
+            border-top: 50px solid;
+            border-color: transparent red transparent transparent;
+        }
+
+        .triangle-right {
+            width: 0px;
+            border-left: 70px solid;
+            border-bottom: 50px solid;
+            border-top: 50px solid;
+            border-color: transparent transparent transparent red;
+        }
+
+        .trapezium {
+            width: 50px;
+            border: 50px solid red;
+            border-color: transparent transparent red transparent;
+        }
+
+        .wide-triangle {
+            width: 0;
+            border-left: 150px solid;
+            border-right: 150px solid;
+            border-bottom: 50px solid;
+            border-color: transparent transparent red transparent;
+        }
+
+        .point-triangle {
+            width: 0;
+            border-left: 50px solid;
+            border-right: 50px solid;
+            border-bottom: 200px solid;
+            border-color: transparent transparent red transparent;
+        }
+
+        .isosceles-triangle {
+            width: 0;
+            border: 50px solid;
+            border-color: transparent transparent red transparent;
+
+        }
+
+        .arow-left {
+            width: 0px;
+            border-right: 50px solid;
+            border-bottom: 30px solid;
+            border-top: 30px solid;
+            border-color: transparent red transparent transparent;
+        }
+
+        .arow-right {
+            width: 0px;
+            border-left: 50px solid;
+            border-bottom: 30px solid;
+            border-top: 30px solid;
+            border-color: transparent transparent transparent red;
+        }
+
+        .ribbon {
+            width: 50px;
+            border: 50px solid;
+            border-color: red transparent red red;
+        }
+
+        .container {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .f-spine {
+            display: inline-block;
+            width: 0;
+            height: 200px;
+            border-left: 25px red solid;
+        }
+
+        .f-arms {
+            display: inline-block;
+        }
+
+        .f-arm-top {
+            width: 100px;
+            height: 75px;
+            border-top: 25px red solid;
+            margin-left: -10px;
+        }
+
+        .f-arm-mid {
+            width: 100px;
+            height: 75px;
+            border-top: 25px red solid;
+            margin-left: -10px;
+        }
+
+        .box-8-top {
+            width: 75px;
+            height: 50px;
+            border: 25px red solid;
+        }
+
+        .box-8-bottom {
+            width: 75px;
+            height: 75px;
+            border-right: 25px red solid;
+            border-left: 25px red solid;
+            border-bottom: 25px red solid;
+        }
+
+        p {
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="square"></div>
+        <p>1. Hình vuông</p>
+    </div>
+
+    <div class="box">
+        <div class="rectangle"></div>
+        <p>2. Hình chữ nhật</p>
+    </div>
+
+    <div class="box">
+        <div class="triangle-up"></div>
+        <p>3. Hình tam lên</p>
+    </div>
+
+    <div class="box">
+        <div class="triangle-down"></div>
+        <p>4. Hình tam xuống</p>
+    </div>
+
+    <div class="box">
+        <div class="triangle-left"></div>
+        <p>5. Hình tam trái</p>
+    </div>
+
+    <div class="box">
+        <div class="triangle-right"></div>
+        <p>6. Hình tam phải</p>
+    </div>
+
+    <div class="box">
+        <div class="trapezium"></div>
+        <p>7. Hình thang</p>
+    </div>
+
+    <div class="box">
+        <div class="wide-triangle"></div>
+        <p>8. Hình tam giác rộng</p>
+    </div>
+
+    <div class="box">
+        <div class="point-triangle"></div>
+        <p>9. Hình tam giác nhọn</p>
+    </div>
+
+    <div class="box">
+        <div class="isosceles-triangle"></div>
+        <p>10. Hình tam giác cân</p>
+    </div>
+
+    <div class="box">
+        <div class="arow-right"></div>
+        <p>11. Mũi tên phải</p>
+    </div>
+
+    <div class="box">
+        <div class="arow-left"></div>
+        <p>12. Mũi tên trái</p>
+    </div>
+
+    <div class="box">
+        <div class="ribbon"></div>
+        <p>13. Ribbon/Lá cờ</p>
+    </div>
+
+    <div class="box">
+        <!-- Cấu trúc số chữ f -->
+        <div class="container">
+            <div class="f-spine"></div>
+            <div class="f-arms">
+                <div class="f-arm-top"></div>
+                <div class="f-arm-mid"></div>
+            </div>
+        </div>
+
+        <!-- Cấu trúc số 8 -->
+        <div class="container">
+            <div class="box-8-top"></div>
+            <div class="box-8-bottom"></div>
+        </div>
+        <p>14. F8</p>
+    </div>
+</body>
+
+
+</html>
