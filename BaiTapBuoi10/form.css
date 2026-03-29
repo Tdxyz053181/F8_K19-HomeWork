@@ -1,1 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body > button {
+    position: absolute;
+    height: 3rem;
+    width: 10rem;
+    border-radius: 0.8rem;
+    border: none;
+    background-color: #f05123;
+    color: #ffffff;
+}
+
+body > button:hover {
+    background-color: #d8431c;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    position: relative;
+    display: none;
+}
+
+
+
+.model {
+    width: 40rem;
+    max-height: 47rem;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    margin: auto;
+    border-radius: 2rem;
+    padding: 2.4rem;
+}
+
+#model-toggle:checked ~ .overlay {
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+}
+
+.model h2 {
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.model p {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #64748b;
+    margin-bottom: 1.6rem;
+}
+
+.user-info {
+    margin: 1rem 0;
+    position: relative;
+}
+
+.user-info label span {
+    color: #ef4444;
+}
+
+.user-info > label {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #334155;
+}
+
+.user-info input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #e2e8f0;
+    background-color: #f8fafc;
+}
+
+.courses input {
+    accent-color: #22c55e;
+}
+
+
+.user-info input:hover {
+    border-color: #ef4444;
+}
+
+.user-info input:focus {
+    outline: #ef4444;
+}
+
+.courses > span {
+    font-size: 1.4rem;
+}
+
+.courses > span > span {
+    color: 
+}
+
+.courses div {
+    font-size: 1.4rem;
+    padding: 0.4rem 0;
+}
+
+.courses {
+    position: relative;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 2rem;
+    color: white;
+    font-weight: bold;
+    background-color: #a855f7;
+    border: none;
+    margin: 1rem 0;
+}
+
+.btn-submit:hover {
+    background-color: #9333ea;
+}
+
+.tooltip {
+    color: #ffffff;
+    display: none;
+    position: absolute;
+    top: -1.5rem;
+    white-space: normal;
+    min-width: 15rem;
+}
+
+.tool-js {
+    top: 1.5rem;
+}
+
+.tool-react {
+    top: 3rem;
+}
+
+.tooltip span {
+    background-color: #1e293b;
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    border-radius: 0.3rem;
+}
+
+.tooltip::after {
+    content: "";
+    width: 0;
+    display: block;
+    margin: 0.2rem 0 0 1rem;
+    border-top: 0.4rem solid #1e293b;
+    border-right: 0.4rem solid transparent;
+    border-left: 0.4rem solid transparent;
+}
+
+.user-info input:hover+ .tooltip {
+    display: block;
+}
+
+.courses input:hover+ .tooltip {
+    display: block;
+}
+
 
