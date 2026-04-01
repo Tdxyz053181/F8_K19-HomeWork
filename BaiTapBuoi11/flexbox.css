@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 10px;
+}
+
+.container {
+    width: 600px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.box1,
+.box2,
+.box3 {
+    width: 60px;
+    height: 60px;
+}
+
+.box1 {
+    background-color: red;
+}
+
+.box2 {
+    background-color: green;
+}
+
+.box3 {
+    background-color: blue;
+}
+
+/* Container 1 */
+.ctn-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Container 2 */
+.ctn-2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+/* Container 3 */
+.ctn-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ctn-3 .box1 {
+    margin-bottom: 20px;
+}
+
+.ctn-3 .box2 {
+    margin-bottom: 50px;
+}
+
+/* Container 4 */
+.ctn-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctn-4 .box1 {
+    margin-right: 10px;
+}
+
+.ctn-4 .box2 {
+    margin-right: 40px;
+}
+
+/* Container 5 */
+.ctn-5 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container 6 */
+.ctn-6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Container 7 */
+.ctn-7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ctn-7 .box1 {
+    margin-bottom: 60px;
+}
+
+.ctn-7 .box2 {
+    margin-bottom: 20px;
+}
+
+
+/* Container 8 */
+.ctn-8 {
+    display: flex;
+    align-items: center;
+}
+
+.ctn-8 .box2 {
+    margin: 0 auto;
+}
+
+/* Container 9 */
+.ctn-9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctn-9 .box1 {
+    margin-right: 20px;
+    margin-top: -40px;
+}
+
+.ctn-9 .box2 {
+    margin-right: 20px;
+}
+
+.ctn-9 .box3 {
+    margin-bottom: -40px;
+}
+
+/* Container 10 */
+.ctn-10 {
+    display: flex;
+    align-items: center;
+}
+
+.ctn-10 .box1 {
+    margin-bottom: auto;
+}
+
+.ctn-10 .box2 {
+    margin: 0 auto;
+}
+
+.ctn-10 .box3 {
+    margin-top: auto;
+}
