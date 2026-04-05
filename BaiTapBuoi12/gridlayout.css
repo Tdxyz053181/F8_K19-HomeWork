@@ -9,23 +9,33 @@ body {
     background-color: #f8f9fa;
 }
 
-h2 {
+.title {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.title h2 {
     font-size: 36px;
     font-weight: 700;
     color: #2c3e50;
+    text-align: center;
+    padding: 20px 0;
 }
 
-p {
+.title p {
     font-size: 15px;
     color: #7f8c8d;
-    display: inline-block;
+    text-align: center;
+    line-height: 1.6
 }
 
 .card-layout {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
-    width: calc((100%-50px)/3);
+    justify-content: center;
+    max-width: 1150px;
+    margin: 0 auto;
 }
 
 .card {
@@ -34,6 +44,11 @@ p {
     background-color: #ffffff;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
+    position: relative;
+}
+
+.card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 img {
@@ -43,12 +58,208 @@ img {
 
 .content {
     padding: 18px;
-    color: #95a5a6;
-    font-size: 12px;
 }
 
-h2 {
+.content p {
+    display: inline-block;
+    font-size: 12px;
+    color: #95a5a6;
+}
+
+.mdi-map-marker {
+    font-size: 12px;
+    color: #95a5a6;
+}
+
+.content h2 {
     font-size: 16px;
     font-weight: 600;
     color: #2c3e50;
+    margin-top: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #bdc3c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mdi-account {
+    color: #ffffff;
+}
+
+.user-name {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-left: 8px;
+}
+
+.mdi-calendar {
+    font-size: 12px;
+    color: #95a5a6;
+    margin-left: 100px;
+}
+
+.time {
+    font-size: 12px;
+    color: #95a5a6;
+    margin-left: 8px;
+}
+
+.info-item {
+    display: inline-block;
+    margin-right: 24px;
+}
+
+.info-item span {
+    margin-right: 6px;
+}
+
+.mdi-floor-plan,
+.mdi-bed,
+.mdi-shower {
+    font-size: 12px;
+    color: #95a5a6;
+}
+
+.text {
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.detail-info {
+    border-top: 1px solid #ecf0f1;
+}
+
+.badge-sale .badge {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    display: inline-block;
+}
+
+.badge-sale {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.for-sale {
+    background-color: #e74c3c;
+}
+
+.for-rent {
+    background-color: #e67e22;
+}
+
+.mdi-flash {
+    color: #ffffff;
+}
+
+.badge-sale span {
+    height: 32px;
+    width: 32px;
+    background-color: #2c3e50;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 14px;
+}
+
+.badge-house {
+    padding: 6px 16px;
+    border-radius: 20px;
+    background-color: #34495e;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    position: absolute;
+    top: 20px;
+    right: 18px;
+}
+
+.badge-price {
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: #16a085;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    position: absolute;
+    bottom: 200px;
+    left: 18px;
+}
+
+.badge-price:hover {
+    box-shadow: 0 4px 12px rgba(22, 160, 133, 0.4);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 200px;
+    right: 18px;
+}
+
+.btn-heart {
+    margin-left: 8px;
+    position: relative;;
+}
+
+button span {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+ {
+    color: #7f8c8d;
+    font-size: 20px;
+}
+
+.mdi-heart-outline {
+    color: #e74c3c;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+}
+
+.mdi-heart {
+    background-color: #e74c3c;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.btn-heart:hover .mdi-heart-outline {
+    display: none;
+}
+
+.btn-share:hover .mdi-share-variant {
+    background-color: #3498db;
+    color: #ffffff;
 }
