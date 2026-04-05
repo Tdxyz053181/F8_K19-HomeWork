@@ -24,6 +24,31 @@ body {
     border: 3px solid #e0e0e0;
 }
 
+.card-design:hover {
+    border: 3px solid #ff6b6b;
+}
+
+.card-theme:hover {
+    border: 3px solid #4ecdc4;
+}
+
+.card-marketing:hover {
+    border: 3px solid #f9a825;
+}
+
+.card-web:hover {
+    border: 3px solid #5e9cff;
+}
+
+.card-responsive:hover {
+    border: 3px solid #9b59b6;
+}
+
+.card-support:hover {
+    border: 3px solid #7cb342;
+}
+
+
 h2 {
     font-size: 20px;
     font-weight: 600;
@@ -44,7 +69,7 @@ p {
 a {
     font-size: 15px;
     font-weight: 500;
-    color: #2196f3 ;
+    color: #2196f3;
     text-decoration: none;
 }
 
@@ -54,4 +79,41 @@ a:hover {
 
 .service-card:hover {
     border: ;
+}
+
+.mdi {
+    font-size: 32px;
+        height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mdi-brush-variant {
+    background-color: #ff6b6b;
+}
+
+.mdi-view-dashboard {
+    background-color: #4ecdc4;
+}
+
+.mdi-flash {
+    background-color: #f9a825;
+}
+
+.mdi-palette {
+    background-color: #5e9cff;
+}
+
+.mdi-layers {
+    background-color: #9b59b6;
+}
+
+.mdi-email {
+    background-color: #7cb342;
 }
