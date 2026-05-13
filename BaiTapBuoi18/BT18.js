@@ -1,19 +1,4 @@
 // Bài Tập 1
-const student = {
-  name: 'hoang',
-  parent: {
-    name: 'bo hoang'
-  }
-}
-
-const mentor = { ...student }
-
-mentor.name = 'bang'
-mentor.parent.name = 'bo bang'
-
-console.log(student)
-console.log(mentor)
-
 // 1. student.name có bị đổi không?
 // Không bị đổi.
 // Giá trị vẫn là 'hoang'.
@@ -28,19 +13,6 @@ console.log(mentor)
 
 
 // Bài Tập 2
-const student = {
-  name: 'hoang',
-  parent: {
-    name: 'bo hoang'
-  }
-}
-
-const mentor = JSON.parse(JSON.stringify(student))
-
-mentor.parent.name = 'bo bang'
-
-console.log(student)
-console.log(mentor)
 // 1. student.parent.name có bị ảnh hưởng không?
 // Không bị ảnh hưởng.
 // Sau khi chạy:
@@ -55,14 +27,28 @@ console.log(mentor)
 // Còn Spread chỉ copy ở tầng nông và các object từ tầng thứ 2 chỉ copy tham chiếu (reference), không copy nội dung object. Thay đổi nội dung ở object con -> Ảnh hưởng đến object gốc
 
 // Bài tập 3
-const students = [
-  { name: 'a' },
-  { name: 'b' }
-]
+// 1. Mảng có bị thay đổi không?
+// -> Không. Mảng students không bị thay đổi về cấu trúc, vẫn chứa 2 phần tử, và giữ nguyên các tham số
+// 2. Phần tử bên trong có bị thay đổi không?
+// -> Có
+// 
+// Nguyên nhân ở dòng spread [...students] chỉ tạo ra một mảng mới, các giá trị primitive sẽ được copy giá trị thật. 
+// Các giá trị object và array bên trong chỉ copy tham chiếu (reference), không copy sâu.
+// Vì vậy newStudents là mảng mới, nhưng {name: 'a'} và {name: 'b'} vẫn là cùng object với mảng gốc. 
+// Nên khi sửa newStudents[0].name = 'z' → students[0] cũng bị ảnh hưởng.
 
-const newStudents = [...students]
 
-newStudents[0].name = 'z'
-
-console.log(students)
-console.log(newStudents)
+// Bài tập 4
+// Câu hỏi: Kết quả là bao nhiêu? Vì sao?
+// Kết quả: user.address.location.lat bị thay đổi thành 999
+// Vì tại dòng const newUser = { ...user } -> Có tác dụng:
+// - Tạo ra 1 object mới (newUser) — khác tham chiếu với user.
+// - Copy các thuộc tính ở tầng 1
+//  + name: là string (primitive) → copy giá trị.
+//  + address: là object → chỉ copy tham chiếu (reference).
+// Cấu trúc bộ nhớ sau khi spread:
+// user → object gốc
+// newUser → object mới
+// user.address === newUser.address (cùng tham chiếu)
+// user.address.location === newUser.address.location (cùng tham chiếu)
+// Do đó khi sửa newUser.address.location.lat = 999 -> user cũng bị ảnh hưởng. (Do cùng tham chiêu)
